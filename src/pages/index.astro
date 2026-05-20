@@ -7,13 +7,18 @@ import DiffApp from '../components/DiffApp.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Diff Files Online - Compare Code and Text 100% Free & Secure">
+<Layout 
+  title="Diff Files Online - Compare Code and Text 100% Free & Secure"
+  description="Compare two files or texts side-by-side locally, quickly and 100% privately. Find differences in code, JSON, or text without uploading data to any server."
+>
   <Navbar />
   
   <main class="relative z-10">
-    <!-- Ambient glowing backgrounds on page-level -->
-    <div class="absolute top-[800px] left-1/2 -translate-x-1/2 -z-10 h-[500px] w-[500px] rounded-full bg-indigo-500/5 blur-[120px] pointer-events-none"></div>
-    <div class="absolute top-[1600px] right-10 -z-10 h-[400px] w-[400px] rounded-full bg-fuchsia-500/5 blur-[120px] pointer-events-none"></div>
+    <!-- Ambient glowing backgrounds container (clipped to prevent page-level horizontal overflow) -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+      <div class="absolute top-[800px] left-1/2 -translate-x-1/2 h-[500px] w-[500px] rounded-full bg-indigo-500/5 blur-[120px]"></div>
+      <div class="absolute top-[1600px] right-10 h-[400px] w-[400px] rounded-full bg-fuchsia-500/5 blur-[120px]"></div>
+    </div>
 
     <Hero />
     <DiffApp />

@@ -23,28 +23,28 @@
         <div class="inline-flex rounded-xl bg-[#010409] p-1 border border-[#30363d] shadow-inner">
           <button 
             id="btn-view-side" 
-            class="flex items-center gap-1.5 rounded-lg px-4 py-1.5 text-xs sm:text-sm font-semibold transition-all duration-200 bg-[#21262d] text-[#c9d1d9] border border-[#8b949e]/40 shadow-sm"
+            class="flex items-center gap-1.5 rounded-lg px-2 py-1.5 sm:px-4 text-xs sm:text-sm font-semibold transition-all duration-200 bg-[#21262d] text-[#c9d1d9] border border-[#8b949e]/40 shadow-sm"
           >
             <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
             </svg>
-            Split View
+            Split<span class="hidden sm:inline"> View</span>
           </button>
           <button 
             id="btn-view-unified" 
-            class="flex items-center gap-1.5 rounded-lg px-4 py-1.5 text-xs sm:text-sm font-medium text-[#8b949e] hover:text-[#c9d1d9] transition-all duration-200"
+            class="flex items-center gap-1.5 rounded-lg px-2 py-1.5 sm:px-4 text-xs sm:text-sm font-medium text-[#8b949e] hover:text-[#c9d1d9] transition-all duration-200"
           >
             <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
-            Unified View
+            Unified<span class="hidden sm:inline"> View</span>
           </button>
         </div>
 
         <!-- Toggle inputs visibility -->
         <button
           id="btn-toggle-inputs"
-          class="flex items-center gap-1.5 rounded-xl border border-[#30363d] bg-[#21262d] hover:bg-[#30363d] hover:border-[#8b949e] px-4 py-2.5 text-xs font-semibold text-[#c9d1d9] transition-all duration-200 shadow-sm"
+          class="flex items-center gap-1.5 rounded-xl border border-[#30363d] bg-[#21262d] hover:bg-[#30363d] hover:border-[#8b949e] px-2.5 py-2 sm:px-4 sm:py-2.5 text-xs font-semibold text-[#c9d1d9] transition-all duration-200 shadow-sm"
           title="Hide or show the input editors"
         >
           <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -88,13 +88,13 @@
           
           <!-- Input Left (Original) -->
           <div class="flex flex-col">
-            <div class="flex items-center justify-between mb-2">
-              <label class="text-xs font-semibold uppercase tracking-wider text-[#8b949e]">Original Text (Left Side)</label>
-              <div class="flex items-center gap-2">
-                <span id="file-name-left-container" class="hidden text-2xs font-mono bg-[#010409] border border-[#30363d] text-[#8b949e] px-2 py-0.5 rounded">
-                  Original: <span id="file-name-left"></span>
+            <div class="flex items-center justify-between mb-2 gap-2">
+              <label class="text-xs font-semibold uppercase tracking-wider text-[#8b949e] truncate flex-shrink-0">Original Text (Left)</label>
+              <div class="flex items-center gap-2 min-w-0">
+                <span id="file-name-left-container" class="hidden text-2xs font-mono bg-[#010409] border border-[#30363d] text-[#8b949e] px-2 py-0.5 rounded truncate max-w-[110px] sm:max-w-[200px]">
+                  Original: <span id="file-name-left" class="truncate"></span>
                 </span>
-                <button id="btn-copy-left" class="text-2xs text-[#8b949e] hover:text-[#c9d1d9] font-medium transition-colors">Copy</button>
+                <button id="btn-copy-left" class="text-2xs text-[#8b949e] hover:text-[#c9d1d9] font-medium transition-colors flex-shrink-0">Copy</button>
               </div>
             </div>
             
@@ -121,13 +121,13 @@
 
           <!-- Input Right (Modified) -->
           <div class="flex flex-col">
-            <div class="flex items-center justify-between mb-2">
-              <label class="text-xs font-semibold uppercase tracking-wider text-[#8b949e]">Modified Text (Right Side)</label>
-              <div class="flex items-center gap-2">
-                <span id="file-name-right-container" class="hidden text-2xs font-mono bg-[#010409] border border-[#30363d] text-[#8b949e] px-2 py-0.5 rounded">
-                  Modified: <span id="file-name-right"></span>
+            <div class="flex items-center justify-between mb-2 gap-2">
+              <label class="text-xs font-semibold uppercase tracking-wider text-[#8b949e] truncate flex-shrink-0">Modified Text (Right)</label>
+              <div class="flex items-center gap-2 min-w-0">
+                <span id="file-name-right-container" class="hidden text-2xs font-mono bg-[#010409] border border-[#30363d] text-[#8b949e] px-2 py-0.5 rounded truncate max-w-[110px] sm:max-w-[200px]">
+                  Modified: <span id="file-name-right" class="truncate"></span>
                 </span>
-                <button id="btn-copy-right" class="text-2xs text-[#8b949e] hover:text-[#c9d1d9] font-medium transition-colors">Copy</button>
+                <button id="btn-copy-right" class="text-2xs text-[#8b949e] hover:text-[#c9d1d9] font-medium transition-colors flex-shrink-0">Copy</button>
               </div>
             </div>
 
@@ -187,14 +187,13 @@
 
     <!-- Rendered Diff Output Section (GitHub Layout style) -->
     <div class="rounded-xl border border-[#30363d] bg-[#0d1117] overflow-hidden">
-      <!-- File Headers inside output (visible in side-by-side mode) -->
-      <div id="diff-output-headers" class="grid grid-cols-2 divide-x divide-[#30363d] border-b border-[#30363d] bg-[#161b22] px-4 py-2.5 font-mono text-2xs text-[#8b949e] select-none">
-        <div>ORIGINAL FILE</div>
-        <div class="pl-4">MODIFIED FILE</div>
-      </div>
-
       <!-- Target Scrollable Container -->
       <div id="diff-render-container" class="overflow-x-auto w-full">
+        <!-- File Headers inside output (visible in side-by-side mode) -->
+        <div id="diff-output-headers" class="grid grid-cols-2 divide-x divide-[#30363d] border-b border-[#30363d] bg-[#161b22] px-4 py-2.5 font-mono text-2xs text-[#8b949e] select-none min-w-[768px]">
+          <div>ORIGINAL FILE</div>
+          <div class="pl-4">MODIFIED FILE</div>
+        </div>
         <!-- Rendered lines go here -->
         <div id="diff-output-pane" class="min-w-[768px] text-xs font-mono divide-y divide-[#30363d]/30">
           <div class="p-8 text-center text-[#8b949e] italic">
@@ -463,9 +462,13 @@ console.log(\`Server for \${serverConfig.environment} running on port \${serverC
     // Render based on mode
     if (currentViewMode === 'side') {
       diffOutputHeaders.classList.remove('hidden');
+      diffOutputPane.classList.add('min-w-[768px]');
+      diffOutputPane.classList.remove('w-full');
       renderSideBySide(diffParts);
     } else {
       diffOutputHeaders.classList.add('hidden');
+      diffOutputPane.classList.remove('min-w-[768px]');
+      diffOutputPane.classList.add('w-full');
       renderUnified(diffParts);
     }
   }
@@ -739,8 +742,8 @@ console.log(\`Server for \${serverConfig.environment} running on port \${serverC
 
   // Helper to update button states (GitHub Dark style toggles)
   function setButtonState(activeBtn: HTMLButtonElement, inactiveBtn: HTMLButtonElement) {
-    activeBtn.className = "flex items-center gap-1.5 rounded-lg px-4 py-1.5 text-xs sm:text-sm font-semibold transition-all duration-200 bg-[#21262d] text-[#c9d1d9] border border-[#8b949e]/40 shadow-sm";
-    inactiveBtn.className = "flex items-center gap-1.5 rounded-lg px-4 py-1.5 text-xs sm:text-sm font-medium text-[#8b949e] hover:text-[#c9d1d9] bg-transparent border-0 transition-all duration-200";
+    activeBtn.className = "flex items-center gap-1.5 rounded-lg px-2 py-1.5 sm:px-4 text-xs sm:text-sm font-semibold transition-all duration-200 bg-[#21262d] text-[#c9d1d9] border border-[#8b949e]/40 shadow-sm";
+    inactiveBtn.className = "flex items-center gap-1.5 rounded-lg px-2 py-1.5 sm:px-4 text-xs sm:text-sm font-medium text-[#8b949e] hover:text-[#c9d1d9] bg-transparent border-0 transition-all duration-200";
   }
 
   // Switch to Side-by-Side View
