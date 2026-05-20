@@ -7,13 +7,13 @@ interface Props {
 }
 
 const { 
-	title = "Diferenciar Archivos Online - Comparador de Código y Texto", 
-	description = "Compara dos archivos o textos en paralelo (side-by-side) de forma local, rápida y 100% privada. Encuentra diferencias en código, JSON o texto sin subir datos a ningún servidor."
+	title = "Diff Files Online - Compare Code and Text Locally", 
+	description = "Compare two files or texts side-by-side locally, quickly, and 100% privately. Find differences in code, JSON, or text without uploading data to any server."
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -25,33 +25,58 @@ const {
 		<title>{title}</title>
 		<meta name="title" content={title} />
 		<meta name="description" content={description} />
-		<meta name="keywords" content="comparar archivos, diferenciar archivos, comparar texto, diff online, herramienta de diff, split diff, comparar codigo gratis, local diff, myers diff" />
-		<meta name="author" content="Diff Files Online" />
+		<meta name="keywords" content="compare files, diff files, compare text, online diff, diff tool, split diff, compare code free, local diff, myers diff, devcito, developer tools" />
+		<meta name="author" content="devcito" />
 		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href="https://diff.devcito.org/" />
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://diff-files-online.example.com/" />
+		<meta property="og:url" content="https://diff.devcito.org/" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:image" content="/og-image.png" />
+		<meta property="og:image" content="https://diff.devcito.org/og-image.png" />
 
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content="https://diff-files-online.example.com/" />
+		<meta property="twitter:url" content="https://diff.devcito.org/" />
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
-		<meta property="twitter:image" content="/og-image.png" />
+		<meta property="twitter:image" content="https://diff.devcito.org/og-image.png" />
+
+		<!-- JSON-LD Structured Data Schema -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "WebApplication",
+				"name": "Diff Files Online - devcito",
+				"url": "https://diff.devcito.org/",
+				"description": "Compare two files or texts side-by-side locally, quickly and 100% privately. Find differences in code, JSON, or text without uploading data.",
+				"applicationCategory": "DeveloperApplication",
+				"operatingSystem": "All",
+				"browserRequirements": "Requires JavaScript. Requires HTML5.",
+				"creator": {
+					"@type": "Organization",
+					"name": "devcito",
+					"url": "https://devcito.org"
+				},
+				"offers": {
+					"@type": "Offer",
+					"price": "0",
+					"priceCurrency": "USD"
+				}
+			}
+		</script>
 
 		<!-- Theme Color -->
-		<meta name="theme-color" content="#09090b" />
+		<meta name="theme-color" content="#0d1117" />
 
 		<!-- Fonts Connect & Loading -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 	</head>
-	<body class="bg-zinc-950 text-zinc-100 font-sans antialiased overflow-x-hidden">
+	<body class="bg-[#0d1117] text-[#c9d1d9] font-sans antialiased overflow-x-hidden">
 		<slot />
 	</body>
 </html>
