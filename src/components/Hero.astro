@@ -1,0 +1,121 @@
+---
+---
+<section id="inicio" class="relative overflow-hidden pt-20 pb-24 md:pt-28 md:pb-32 lg:pt-36 lg:pb-40">
+  <!-- Glowing Background Blobs -->
+  <div class="absolute top-1/4 left-1/2 -z-10 h-[400px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-500/10 blur-[120px] animate-pulse-slow"></div>
+  <div class="absolute top-1/3 left-1/3 -z-10 h-[300px] w-[300px] rounded-full bg-fuchsia-500/10 blur-[90px] animate-float"></div>
+  <div class="absolute top-1/2 right-1/4 -z-10 h-[350px] w-[350px] rounded-full bg-emerald-500/5 blur-[100px] animate-pulse-slow"></div>
+
+  <!-- Dot background overlay -->
+  <div class="absolute inset-0 bg-grid-dots -z-20 opacity-40"></div>
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+    <!-- Badge -->
+    <div class="inline-flex items-center gap-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3.5 py-1 text-xs sm:text-sm font-semibold tracking-wide text-indigo-300 backdrop-blur-md mb-8 animate-float">
+      <span class="flex h-2 w-2 rounded-full bg-indigo-400 animate-ping"></span>
+      100% Local y Privado — Sin servidores
+    </div>
+
+    <!-- Main Heading -->
+    <h1 class="font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl max-w-5xl mx-auto leading-[1.1] md:leading-[1.05]">
+      Encuentra diferencias en tus <br class="hidden sm:inline" />
+      <span class="bg-gradient-to-r from-indigo-400 via-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+        archivos y código
+      </span>
+      en segundos
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="mx-auto mt-6 max-w-2xl text-base sm:text-lg md:text-xl text-zinc-400 leading-relaxed">
+      Compara archivos de texto, código fuente o JSON de forma local. Tus datos nunca salen de tu navegador. Rápido, seguro y diseñado para la mejor experiencia visual.
+    </p>
+
+    <!-- Call to Actions -->
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+      <a 
+        href="#diff-tool" 
+        class="inline-flex h-12 items-center justify-center rounded-xl bg-gradient-to-r from-indigo-500 via-indigo-600 to-violet-600 px-8 text-base font-semibold text-white shadow-lg shadow-indigo-500/20 transition-all duration-300 hover:shadow-indigo-500/35 hover:scale-[1.03] active:scale-[0.98]"
+      >
+        Empezar a Comparar
+      </a>
+      <a 
+        id="hero-example-btn"
+        href="#diff-tool" 
+        class="inline-flex h-12 items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900/50 backdrop-blur-sm px-8 text-base font-semibold text-zinc-300 transition-all duration-300 hover:bg-zinc-900 hover:text-white hover:border-zinc-700"
+      >
+        Ver un Ejemplo
+      </a>
+    </div>
+
+    <!-- Visual Mockup (Diff Preview) -->
+    <div class="relative mt-16 md:mt-20 mx-auto max-w-5xl rounded-2xl border border-zinc-800/80 bg-zinc-900/40 p-2 shadow-2xl backdrop-blur-md glow-effect">
+      <div class="rounded-xl border border-zinc-800/50 bg-zinc-950/90 overflow-hidden shadow-inner">
+        <!-- Mockup Toolbar -->
+        <div class="flex items-center justify-between border-b border-zinc-900 bg-zinc-900/30 px-4 py-3">
+          <div class="flex items-center gap-2">
+            <span class="h-3 w-3 rounded-full bg-rose-500/80"></span>
+            <span class="h-3 w-3 rounded-full bg-amber-500/80"></span>
+            <span class="h-3 w-3 rounded-full bg-emerald-500/80"></span>
+            <span class="ml-2 text-xs font-mono text-zinc-500">comparacion_ejemplo.js</span>
+          </div>
+          <div class="flex items-center gap-1 bg-zinc-900 rounded-lg p-0.5 border border-zinc-800/60">
+            <span class="rounded px-2.5 py-1 text-2xs font-bold text-indigo-400 bg-indigo-500/10">Paralelo</span>
+            <span class="rounded px-2.5 py-1 text-2xs font-semibold text-zinc-400">Unificado</span>
+          </div>
+        </div>
+
+        <!-- Mockup Columns -->
+        <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-zinc-900 font-mono text-xs sm:text-sm text-left p-4 h-64 overflow-hidden select-none opacity-85">
+          <!-- Left Column (Original) -->
+          <div class="space-y-1.5 p-2 bg-zinc-950">
+            <div class="flex text-zinc-500"><span class="w-8 select-none text-right pr-3 text-zinc-700">10</span><span>const config = &#123;</span></div>
+            <div class="flex text-zinc-500"><span class="w-8 select-none text-right pr-3 text-zinc-700">11</span><span class="bg-rose-500/10 text-rose-300 w-full rounded">-   version: "1.0.0",</span></div>
+            <div class="flex text-zinc-500"><span class="w-8 select-none text-right pr-3 text-zinc-700">12</span><span class="bg-rose-500/10 text-rose-300 w-full rounded">-   secure: false,</span></div>
+            <div class="flex text-zinc-500"><span class="w-8 select-none text-right pr-3 text-zinc-700">13</span><span>    retries: 3,</span></div>
+            <div class="flex text-zinc-500"><span class="w-8 select-none text-right pr-3 text-zinc-700">14</span><span>    endpoints: [</span></div>
+            <div class="flex text-zinc-500"><span class="w-8 select-none text-right pr-3 text-zinc-700">15</span><span>      "https://api.v1.com"</span></div>
+            <div class="flex text-zinc-500"><span class="w-8 select-none text-right pr-3 text-zinc-700">16</span><span>    ]</span></div>
+            <div class="flex text-zinc-500"><span class="w-8 select-none text-right pr-3 text-zinc-700">17</span><span>&#125;;</span></div>
+          </div>
+          <!-- Right Column (Modified) -->
+          <div class="space-y-1.5 p-2 bg-zinc-950">
+            <div class="flex text-zinc-500"><span class="w-8 select-none text-right pr-3 text-zinc-700">10</span><span>const config = &#123;</span></div>
+            <div class="flex text-zinc-500"><span class="w-8 select-none text-right pr-3 text-zinc-700">11</span><span class="bg-emerald-500/10 text-emerald-300 w-full rounded">+   version: "2.0.0-rc1",</span></div>
+            <div class="flex text-zinc-500"><span class="w-8 select-none text-right pr-3 text-zinc-700">12</span><span class="bg-emerald-500/10 text-emerald-300 w-full rounded">+   secure: true,</span></div>
+            <div class="flex text-zinc-500"><span class="w-8 select-none text-right pr-3 text-zinc-700">13</span><span>    retries: 3,</span></div>
+            <div class="flex text-zinc-500"><span class="w-8 select-none text-right pr-3 text-zinc-700">14</span><span>    endpoints: [</span></div>
+            <div class="flex text-zinc-500"><span class="w-8 select-none text-right pr-3 text-zinc-700">15</span><span>      "https://api.v1.com",</span></div>
+            <div class="flex text-zinc-500"><span class="w-8 select-none text-right pr-3 text-zinc-700">16</span><span class="bg-emerald-500/10 text-emerald-300 w-full rounded">+     "https://api.v2.com"</span></div>
+            <div class="flex text-zinc-500"><span class="w-8 select-none text-right pr-3 text-zinc-700">17</span>    ]</span></div>
+            <div class="flex text-zinc-500"><span class="w-8 select-none text-right pr-3 text-zinc-700">18</span><span>&#125;;</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sparkles / Decorative stars -->
+      <div class="absolute -top-4 -right-4 h-8 w-8 text-fuchsia-400 opacity-60 animate-float" style="animation-delay: 2s;">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg>
+      </div>
+      <div class="absolute -bottom-5 -left-5 h-6 w-6 text-indigo-400 opacity-40 animate-float" style="animation-delay: 4s;">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Add quick listener to scroll and load example
+  const exampleBtn = document.getElementById('hero-example-btn');
+  if (exampleBtn) {
+    exampleBtn.addEventListener('click', (e) => {
+      // Trigger the click of load-example button inside DiffApp if it exists
+      const diffExampleBtn = document.getElementById('btn-load-example');
+      if (diffExampleBtn) {
+        // Small delay to let the scroll start, then load
+        setTimeout(() => {
+          diffExampleBtn.click();
+        }, 100);
+      }
+    });
+  }
+</script>
