@@ -124,3 +124,62 @@ html {
 .animate-pulse-slow {
   animation: pulse-slow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+
+body {
+  background: #0d1117;
+  background-image: linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.workspace-header { border-bottom: 1px solid #303a36; background: #151a18; }
+.workspace-header-inner { max-width: 1280px; height: 66px; margin: auto; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; }
+.workspace-brand { display: flex; align-items: center; gap: 10px; color: #f3f5ef; font: 700 22px "Outfit", sans-serif; }
+.brand-mark { display: flex; align-items: center; justify-content: center; gap: 1px; width: 35px; height: 35px; border: 1px solid #536459; border-radius: 6px; background: #222c26; font: 700 19px "JetBrains Mono", monospace; }
+.brand-mark span:first-child { color: #ef8f81; }
+.brand-mark span:last-child, .brand-accent { color: #b6e08c; }
+.brand-dot { color: #ef8f81; }
+.workspace-status, .workspace-eyebrow { color: #8b949e; font: 600 10px "JetBrains Mono", monospace; letter-spacing: 0; }
+.workspace-status { display: flex; align-items: center; gap: 8px; }
+.workspace-status span, .workspace-caption span { width: 7px; height: 7px; background: #7ee787; border-radius: 50%; }
+.workspace-main { padding: 42px 0 64px; }
+.workspace-title { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 28px; }
+.workspace-eyebrow { margin-bottom: 10px; color: #a5b4fc; }
+.workspace-eyebrow span { color: #8b949e; }
+.workspace-title h2 { color: #f0f3f6; font: 600 38px/1.1 "Outfit", sans-serif; letter-spacing: 0; }
+.workspace-title h2 span { color: #a5b4fc; }
+.workspace-caption { display: flex; align-items: center; gap: 8px; color: #8b949e; font-size: 12px; }
+#diff-tool { padding-top: 40px; padding-bottom: 96px; scroll-margin-top: 80px; }
+#diff-tool > .relative { border-radius: 8px; border-color: #343c4b; background: #0d1117; box-shadow: 0 18px 70px #0006, 0 0 40px rgba(99, 102, 241, .08); }
+#diff-tool button { cursor: pointer; }
+#diff-tool button:focus-visible, #diff-tool input:focus-visible, #diff-tool textarea:focus-visible { outline: 2px solid #a5b4fc; outline-offset: 2px; }
+#diff-tool button:disabled { opacity: .35; cursor: not-allowed; }
+#diff-tool .rounded-xl, #diff-tool .rounded-lg { border-radius: 6px; }
+#inputs-panel { gap: 16px; }
+#inputs-panel label { letter-spacing: 0; color: #c9d1d9; }
+.drag-zone { background: #010409; border-color: #30363d; }
+.drag-zone > div { background: #161b22; border-style: dashed; border-color: #484f58; }
+.drag-zone > div:hover { background: #1c2230; border-color: #818cf8; }
+.drag-zone textarea { color: #c9d1d9; }
+#stats-panel { background: #161b22; border-color: #30363d; }
+.workspace-action, .diff-navigation-controls button { display: inline-flex; align-items: center; justify-content: center; height: 34px; min-width: 34px; border: 1px solid #484f58; border-radius: 5px; background: #21262d; color: #c9d1d9; font-size: 17px; }
+.workspace-action:hover, .diff-navigation-controls button:hover:not(:disabled) { background: #30363d; border-color: #818cf8; }
+.diff-navigation { display: flex; align-items: center; gap: 20px; margin-bottom: 12px; }
+.diff-navigation-controls { display: flex; align-items: center; gap: 8px; flex-shrink: 0; color: #8b949e; font: 500 11px "JetBrains Mono", monospace; }
+.diff-navigation-label { color: #c9d1d9; font-weight: 700; }
+.diff-navigation-controls button { height: 28px; min-width: 28px; font-size: 15px; }
+.change-map { position: relative; flex: 1; height: 20px; border-radius: 3px; background: #161b22; border: 1px solid #30363d; }
+.change-marker { position: absolute; top: 2px; bottom: 2px; width: 5px; transform: translateX(-50%); border-radius: 1px; background: #7ee787; }
+.change-marker.is-removed { background: #ff7b72; }
+.change-marker.is-active { outline: 2px solid #e6edf3; z-index: 1; }
+#diff-render-container { background: #0d1117; }
+#diff-output-headers { position: sticky; top: 0; z-index: 2; background: #161b22; }
+@media (max-width: 640px) {
+  .workspace-header-inner { padding: 0 16px; }
+  .workspace-main { padding: 30px 0 40px; }
+  .workspace-title { align-items: start; flex-direction: column; gap: 12px; }
+  .workspace-title h2 { font-size: 32px; }
+  .workspace-status { font-size: 9px; }
+  #diff-tool { padding-top: 24px; padding-bottom: 64px; }
+  .diff-navigation { align-items: stretch; flex-direction: column; gap: 10px; }
+  .change-map { flex: auto; }
+}
